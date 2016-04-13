@@ -1,0 +1,12 @@
+---
+name: build_job
+runner_type: run-python
+description: Initiate TeamCity job build.
+enabled: true
+entry_point: build_job.py
+parameters:
+  project:
+    type: string
+    description: Local dir containing Dockerfile or local path to Dockerfile or remote
+      url.
+    required: true

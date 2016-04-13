@@ -1,0 +1,10 @@
+---
+name: teamcity
+description: TeamCity CI Integration Pack
+keywords:
+  - continuous integration
+  - ci
+  - teamcity
+version: 0.1
+author: Jason Webb
+email: jason@jswebb.net

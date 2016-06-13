@@ -2,5 +2,5 @@
 name: list_build_configs
 runner_type: run-python
 description: "List all build configurations"
-enabled: true
+enabled: false
 entry_point: "list_build_configs.py"

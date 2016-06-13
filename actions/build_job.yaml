@@ -2,7 +2,7 @@
 name: build_job
 runner_type: run-python
 description: Initiate TeamCity job build.
-enabled: true
+enabled: false
 entry_point: build_job.py
 parameters:
   project:

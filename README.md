@@ -5,8 +5,9 @@ This package creates a basic integration with TeamCity
 ## Configuration
 
 * `url` - FQDN to TeamCity Server (e.x.: http://teamcity.example.com)
-* `username` - TeamCity Username
-* `password` - TeamCity Password
+* `username` - (optional) TeamCity Username
+* `password` - (optional) TeamCity Password
+* `version` - (optional) Version of API/Teamcity.  Defaults to latest
 
 ## Actions
 

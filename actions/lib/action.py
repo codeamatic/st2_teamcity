@@ -41,9 +41,9 @@ class TeamCityAction(Action):
             baseuri = 'httpAuth'
 
         if self._version:
-            baseurl += '/' + baseuri + '/rest/app/' + self._version
+            baseurl += '/' + baseuri + '/app/rest' + self._version
         else:
-            baseurl += '/' + baseuri + '/rest/app'
+            baseurl += '/' + baseuri + '/app/rest'
 
         return baseurl
 
@@ -73,6 +73,9 @@ class TeamCityAction(Action):
         Returns:
             string: Json string response
         """
+        if endpoint[0] == '/':
+            endpoint = endpoint.lstrip('/')
+
         url = '/'.join([self._url, endpoint])
         r = requests.get(url, params, headers=self._headers)
         r.raise_for_status()

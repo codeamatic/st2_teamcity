@@ -1,0 +1,7 @@
+---
+name: teamcity_queue
+pack: teamcity
+description: "Retrieve Build Queue"
+action_ref: "teamcity.get_build_queue"
+formats:
+  - "teamcity queue"

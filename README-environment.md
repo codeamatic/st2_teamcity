@@ -24,7 +24,7 @@ In order to deploy your custom pack, you will need to copy your pack to _/opt/st
 After copying the pack to _/opt/stackstorm/packs_, run the following commands to load your new pack.
 
 ```
-sudo st2ctl reload --register-actions
+sudo st2ctl reload --register-all
 
 st2 run packs.setup_virtualenv packs=teamcity
 ```

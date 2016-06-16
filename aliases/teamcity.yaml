@@ -13,9 +13,9 @@ result:
     Failed!
     {% else %}
 
-    {% if execution.result.result.count > 0}
+    {% if execution.result.result.count > 0 %}
 
-    *Build Queue Summary:*
+    Build Queue Summary:
     {% for build in execution.result.result.build %}
     * {{ build.id }} - {{ build.buildTypeId }}
     {% endfor %}

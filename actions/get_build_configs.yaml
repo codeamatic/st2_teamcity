@@ -1,0 +1,6 @@
+---
+name: get_build_configs
+runner_type: run-python
+description: "List all build configurations."
+enabled: false
+entry_point: "get_build_configs.py"

@@ -1,0 +1,27 @@
+---
+name: teamcity_list_build_configs
+pack: teamcity
+description: "Retrieve a list of build configurations from TeamCity."
+action_ref: "teamcity.get_build_configs"
+formats:
+  - "teamcity list buildconfigs"
+ack:
+  format: "Retrieving build configurations."
+result:
+  format: |
+    {% if execution.status != 'succeeded' %}
+    Failed!
+    {% else %}
+
+    {% if execution.result.result.count > 0 %}
+
+    Build Configurations:
+    {% for build in execution.result.result.buildType %}
+    * {{ build.id }} - {{build.name}}
+    {% endfor %}
+
+    {% else %}
+    No build configurations exist!
+    {% endif %}
+
+    {% endif %}

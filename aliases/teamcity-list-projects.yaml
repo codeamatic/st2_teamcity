@@ -1,5 +1,5 @@
 ---
-name: teamcity_projects
+name: teamcity_list_projects
 pack: teamcity
 description: "Retrieve list of projects in TeamCity instance."
 action_ref: "teamcity.get_projects"

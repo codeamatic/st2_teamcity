@@ -1,6 +1,6 @@
 ---
 name: get_build_configs
 runner_type: run-python
-description: "List all build configurations."
-enabled: false
+description: "List all unarchived build configurations in TeamCity."
+enabled: true
 entry_point: "get_build_configs.py"

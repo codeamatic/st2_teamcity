@@ -1,7 +1,7 @@
 ---
 name: teamcity_queue
 pack: teamcity
-description: "Retrieve current TeamCity build queue"
+description: "Retrieve current TeamCity build queue."
 action_ref: "teamcity.get_build_queue"
 formats:
   - "teamcity queue"

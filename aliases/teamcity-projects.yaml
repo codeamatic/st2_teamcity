@@ -1,0 +1,27 @@
+---
+name: teamcity_projects
+pack: teamcity
+description: "Retrieve list of projects in TeamCity instance."
+action_ref: "teamcity.get_projects"
+formats:
+  - "teamcity list projects"
+ack:
+  format: "Retrieving the project list."
+result:
+  format: |
+    {% if execution.status != 'succeeded' %}
+    Failed!
+    {% else %}
+
+    {% if execution.result.result.count > 0 %}
+
+    Project List:
+    {% for project in execution.result.result.project %}
+    * {{ project.id }} - {{ project.name }}
+    {% endfor %}
+
+    {% else %}
+    No projects exist!
+    {% endif %}
+
+    {% endif %}

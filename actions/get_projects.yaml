@@ -1,6 +1,0 @@
----
-name: get_projects
-runner_type: run-python
-description: "List of all projects in TeamCity instance."
-enabled: true
-entry_point: "get_projects.py"

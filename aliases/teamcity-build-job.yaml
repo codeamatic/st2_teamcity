@@ -1,0 +1,10 @@
+---
+name: teamcity_build_job
+pack: teamcity
+description: "Trigger a build on the TeamCity server."
+action_ref: "teamcity.build_job"
+formats:
+  - "teamcity build {{build_config_id}}"
+  - "teamcity build {{build_config_id}} {{vcs_branch_name}}"
+ack:
+  format: "Triggering build."

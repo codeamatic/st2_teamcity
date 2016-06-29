@@ -80,3 +80,22 @@ class TeamCityAction(Action):
         r = requests.get(url, params, headers=self._headers)
         r.raise_for_status()
         return r.json()
+
+    def _api_post(self, endpoint, data):
+        """Make get request to the TeamCity api.
+
+         Args:
+             endpoint: A string, endpoint uri request is being made to.
+             data: Json data to be added to the body of the request
+        Returns:
+            string: Json string response
+        """
+        if endpoint[0] == '/':
+            endpoint = endpoint.lstrip('/')
+
+        self._headers['Content-Type'] = 'application/xml'
+
+        url = '/'.join([self._url, endpoint])
+        r = requests.post(url, data=data, headers=self._headers)
+        r.raise_for_status()
+        return r.json()

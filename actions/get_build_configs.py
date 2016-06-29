@@ -1,5 +1,6 @@
 from lib.action import TeamCityAction
 
+
 class GetBuildConfigs(TeamCityAction):
 
     def run(self,):

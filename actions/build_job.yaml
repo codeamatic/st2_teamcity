@@ -9,7 +9,7 @@ parameters:
     type: string
     description: Build configuration ID.
     required: true
-  vcs_branch_name:
+  branch_name:
     type: string
     description: Branch name to be used for build configuration.
-    required: false
+    default: "develop"

@@ -5,7 +5,7 @@ import requests
 
 
 class TeamCityAction(Action):
-    """A simple representation of a human being.
+    """A simple representation of a TeamCity action.
 
     :param config: A list, configurations needed for communicating with TeamCity
     """
@@ -61,6 +61,7 @@ class TeamCityAction(Action):
             auth_header = base64.b64encode('{}:{}'.format(self._username,
                                                           self._password))
             headers['Authorization'] = 'Basic {}'.format(auth_header)
+            headers['User-Agent'] = 'Mozilla/5.0'
 
         return headers
 
@@ -82,7 +83,7 @@ class TeamCityAction(Action):
         return r.json()
 
     def _api_post(self, endpoint, data):
-        """Make get request to the TeamCity api.
+        """Make post request to the TeamCity api.
 
          Args:
              endpoint: A string, endpoint uri request is being made to.
